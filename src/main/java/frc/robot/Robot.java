@@ -13,6 +13,7 @@ import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
+// put the songs in deploy folder!!!!
 
 /**
  * The VM is configured to automatically run this class, and to call the functions corresponding to
@@ -23,7 +24,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 public class Robot extends TimedRobot {
   Orchestra orchestra;
   TalonFX[] motors = { new TalonFX(1), new TalonFX(2), new TalonFX(3), new TalonFX(4), new TalonFX(5)};
-  String[] songs = new String[] {"secret.chrp"};
+  String[] songs = new String[] {"Magalovenia.chrp"};
 
   Joystick left;
   int timetoplay = 60;
