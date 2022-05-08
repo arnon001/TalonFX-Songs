@@ -1,3 +1,4 @@
+
 // Copyright (c) FIRST and other WPILib contributors.
 // Open Source Software; you can modify and/or share it under the terms of
 // the WPILib BSD license file in the root directory of this project.
@@ -23,8 +24,8 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  */
 public class Robot extends TimedRobot {
   Orchestra orchestra;
-  TalonFX[] motors = { new TalonFX(1), new TalonFX(2), new TalonFX(3), new TalonFX(4), new TalonFX(5)};
-  String[] songs = new String[] {"Magalovenia.chrp"};
+  TalonFX[] motors = { new TalonFX(1), new TalonFX(2), new TalonFX(3), new TalonFX(4), new TalonFX(5), new TalonFX(6), new TalonFX(7), new TalonFX(8), new TalonFX(9), new TalonFX(10)};
+  String[] songs = new String[] {"nGGYU.chrp", "Magalovenia.chrp"};
 
   Joystick left;
   int timetoplay = 60;
