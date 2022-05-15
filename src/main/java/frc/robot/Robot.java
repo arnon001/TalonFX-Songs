@@ -10,11 +10,8 @@ import java.util.ArrayList;
 import com.ctre.phoenix.motorcontrol.can.TalonFX;
 import com.ctre.phoenix.music.Orchestra;
 
-import edu.wpi.first.util.sendable.Sendable;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.TimedRobot;
-import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 // put the songs in deploy folder!!!!
 
@@ -26,7 +23,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  */
 public class Robot extends TimedRobot {
   Orchestra orchestra;
-  TalonFX[] motors = { new TalonFX(1), new TalonFX(2), new TalonFX(3), new TalonFX(4), new TalonFX(5), new TalonFX(6), new TalonFX(7), new TalonFX(8), new TalonFX(9), new TalonFX(10), new TalonFX(11)};
+  TalonFX[] motors = { new TalonFX(1), new TalonFX(2), new TalonFX(3), new TalonFX(4), new TalonFX(5), new TalonFX(6), new TalonFX(7), new TalonFX(8), new TalonFX(9), new TalonFX(13)};
   String[] songs = new String[] {"nGGYUd.chrp", "Magalovenia.chrp"};
 
   Joystick left;
