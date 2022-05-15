@@ -10,8 +10,10 @@ import java.util.ArrayList;
 import com.ctre.phoenix.motorcontrol.can.TalonFX;
 import com.ctre.phoenix.music.Orchestra;
 
+import edu.wpi.first.util.sendable.Sendable;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.TimedRobot;
+import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 // put the songs in deploy folder!!!!
@@ -24,27 +26,27 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  */
 public class Robot extends TimedRobot {
   Orchestra orchestra;
-  TalonFX[] motors = { new TalonFX(1), new TalonFX(2), new TalonFX(3), new TalonFX(4), new TalonFX(5), new TalonFX(6), new TalonFX(7), new TalonFX(8), new TalonFX(9), new TalonFX(10)};
-  String[] songs = new String[] {"nGGYU.chrp", "Magalovenia.chrp"};
+  TalonFX[] motors = { new TalonFX(1), new TalonFX(2), new TalonFX(3), new TalonFX(4), new TalonFX(5), new TalonFX(6), new TalonFX(7), new TalonFX(8), new TalonFX(9), new TalonFX(10), new TalonFX(11)};
+  String[] songs = new String[] {"nGGYUd.chrp", "Magalovenia.chrp"};
 
   Joystick left;
   int timetoplay = 60;
 
   /**
    * This function is run when the robot is first started up and should be used for any
-   * initialization code.
+   * initialization code.s
    */
   @Override
   public void robotInit() {
     ArrayList<TalonFX> instruments = new ArrayList<TalonFX>();
     for(int i = 0; i < motors.length; i++) {
       instruments.add(motors[i]);
-    } 
+    }
     orchestra = new Orchestra(instruments);
     left = new Joystick(0);
     loadSong(0);
-    SmartDashboard.putBoolean("Play", false);
   }
+
   private void loadSong(int selection) {
     orchestra.loadMusic(songs[selection]);
   }
@@ -85,9 +87,7 @@ public class Robot extends TimedRobot {
   /** This function is called periodically during operator control. */
   @Override
   public void teleopPeriodic() {
-    boolean play = SmartDashboard.putBoolean("Play", false);
-
-    if (play) orchestra.play(); else orchestra.stop();
+    orchestra.play();
   }
 
   /** This function is called once when the robot is disabled. */
