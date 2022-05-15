@@ -24,7 +24,7 @@ import edu.wpi.first.wpilibj.TimedRobot;
 public class Robot extends TimedRobot {
   Orchestra orchestra;
   TalonFX[] motors = { new TalonFX(1), new TalonFX(2), new TalonFX(3), new TalonFX(4), new TalonFX(5), new TalonFX(6), new TalonFX(7), new TalonFX(8), new TalonFX(9), new TalonFX(13)};
-  String[] songs = new String[] {"nGGYUd.chrp", "Magalovenia.chrp"};
+  String[] songs = new String[] {"nGGYUd.chrp", "Magalovenia.chrp", "oops.chrp" /* Oops.chrp is Pornhub Music*/};
 
   Joystick left;
   int timetoplay = 60;
