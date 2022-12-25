@@ -21,6 +21,11 @@ import edu.wpi.first.wpilibj.TimedRobot;
  * the package after creating this project, you must also update the build.gradle file in the
  * project.
  */
+
+
+/*
+Make sure that the ports of the TalonFX are updated, with Phoneix Tuner!!!, Really Important
+*/
 public class Robot extends TimedRobot {
   Orchestra orchestra;
   TalonFX[] motors = { new TalonFX(1), new TalonFX(2), new TalonFX(3), new TalonFX(4), new TalonFX(5), new TalonFX(6), new TalonFX(7), new TalonFX(8), new TalonFX(9), new TalonFX(13)};
